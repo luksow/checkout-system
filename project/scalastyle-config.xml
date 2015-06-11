@@ -55,11 +55,6 @@
     <check class="org.scalastyle.scalariform.NoFinalizeChecker" level="warning" enabled="true" />
     <check class="org.scalastyle.scalariform.CovariantEqualsChecker" level="warning" enabled="true" />
     <check class="org.scalastyle.scalariform.StructuralTypeChecker" level="warning" enabled="true" />
-    <check class="org.scalastyle.file.RegexChecker" level="error" enabled="true">
-        <parameters>
-            <parameter name="regex"><![CDATA[println]]></parameter>
-        </parameters>
-    </check>
     <check class="org.scalastyle.scalariform.NumberOfTypesChecker" level="warning" enabled="true">
         <parameters>
             <parameter name="maxTypes"><![CDATA[40]]></parameter>
