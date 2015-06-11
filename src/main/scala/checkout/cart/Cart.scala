@@ -3,7 +3,7 @@ package checkout.cart
 import checkout.product.Product
 
 object Cart {
-  def apply(): Cart = Cart(List())
+  def empty: Cart = Cart(List())
 }
 
 case class Cart(products: Seq[Product]) {

@@ -8,11 +8,11 @@ class CartSpec extends FlatSpec with Matchers {
   val orangeProduct = Product(ProductId("orange"), Price(BigDecimal("0.25")))
 
   "cart" should "be empty after created" in {
-    Cart().products shouldBe empty
+    Cart.empty.products shouldBe empty
   }
 
   it should "allow consumer to add new products" in {
-    val emptyCart = Cart()
+    val emptyCart = Cart.empty
     val cartWithApple = emptyCart.withProduct(appleProduct)
     cartWithApple.products should contain(appleProduct)
     val cartWithAnotherApple = cartWithApple.withProduct(appleProduct)

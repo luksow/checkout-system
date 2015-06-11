@@ -39,5 +39,5 @@ object Main extends App {
     }
   }
 
-  processInput(Till.nextCode, Cart())
+  processInput(Till.nextCode, Cart.empty)
 }

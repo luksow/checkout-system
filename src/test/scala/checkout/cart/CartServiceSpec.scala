@@ -9,11 +9,11 @@ class CartServiceSpec extends FlatSpec with Matchers {
   val cartService = new CartService
 
   "Empty cart" should "be worth 0" in {
-    cartService.checkout(Cart()).total should equal(BigDecimal(0))
+    cartService.checkout(Cart.empty).total should equal(BigDecimal(0))
   }
 
   "Cart with products" should "calculate price correctly" in {
-    val cartWithApple = Cart().withProduct(appleProduct)
+    val cartWithApple = Cart.empty.withProduct(appleProduct)
     cartService.checkout(cartWithApple).total should equal(BigDecimal("0.60"))
 
     val cartWithAppleAndOrange = Cart(Seq(appleProduct, orangeProduct))
