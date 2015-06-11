@@ -1,6 +1,6 @@
 package checkout
 
-import checkout.cart.{CartService, Cart}
+import checkout.cart.{ThreeOrangesForTwo, GratisApple, CartService, Cart}
 import checkout.product._
 import scala.annotation.tailrec
 
@@ -16,7 +16,7 @@ object Main extends App {
   private val orangeProduct = Product(ProductId("orange"), Price(BigDecimal("0.25")))
   private val productRepository = new ProductRepository(List(appleProduct, orangeProduct))
   private val productService = new ProductService(productRepository)
-  private val cartService = new CartService
+  private val cartService = new CartService(List(GratisApple, ThreeOrangesForTwo))
 
   @tailrec
   private def processInput(nextInput: Option[String], cart: Cart): Unit = {
